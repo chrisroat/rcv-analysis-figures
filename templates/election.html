@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+
+{% block title %}{{ title }}{% endblock %} 
+
+{% block content %}
+<div id="tabs">
+    <ul>
+        {% for name, fig_title in figures.items() %}
+        <li><a href="#tabs-{{ loop.index }}">{{ fig_title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% for name in figures %}
+    <div id="tabs-{{ loop.index }}">
+        <img src="/data/{{ path }}/{{ name }}.png"">
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(function() { $( "#tabs" ).tabs(); });
+</script>        
+{% endblock %}
+
