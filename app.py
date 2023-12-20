@@ -13,14 +13,15 @@ ELECTIONS = {
     "2020 SF Community College District": "2020/ca/city/san_francisco/general/community_college_district/san_francisco/board",
     "2020 SF School Board": "2020/ca/city/san_francisco/general/school_district/san_francisco/board",
     "2020 Los Altos City Council": "2020/ca/county/santa_clara/general/city/los_altos/council",
+    "2022 Los Altos City Council": "2022/ca/county/santa_clara/general/city/los_altos/council",
 }
 
 app = Flask(__name__)
 
 
-@app.route("/data/2020/<path:path>")
+@app.route("/data/<path:path>")
 def data(path):
-    return send_from_directory("2020", path)
+    return send_from_directory(".", path)
 
 
 @app.route("/")
