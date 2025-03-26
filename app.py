@@ -14,6 +14,8 @@ ELECTIONS = {
     "2020 SF School Board": "2020/ca/city/san_francisco/general/school_district/san_francisco/board",
     "2020 Los Altos City Council": "2020/ca/county/santa_clara/general/city/los_altos/council",
     "2022 Los Altos City Council": "2022/ca/county/santa_clara/general/city/los_altos/council",
+    "2020 Mountain View City Council": "2020/ca/county/santa_clara/general/city/mountain_view/council",
+    "2022 Mountain View City Council": "2022/ca/county/santa_clara/general/city/mountain_view/council",
 }
 
 app = Flask(__name__)
